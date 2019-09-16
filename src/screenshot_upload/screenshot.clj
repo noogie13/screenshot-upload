@@ -32,12 +32,12 @@
   []
   (html
    [:ul
-    (map (fn [[k v]] [:li k]) @files)]))
+    (map (fn [[k v]] [:li (link-to (str "/" (name k))
+                                   (name k))]) @files)]))
 
 (defn access-file
   [key]
   (let [data (@files (keyword key))]
     {:status 200
      :headers {"Content-Type" (first data)}
-     :body (second data)}
-    ))
+     :body (second data)}))
