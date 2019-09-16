@@ -10,8 +10,8 @@
 (defroutes app-routes
   (GET "/" [] (utils/list-files))
   (POST "/" [:as req] (utils/file-upload req))
-  (GET "/:key{[a-zA-Z0-9]{4,8}}" [key] (utils/access-file key)))
-  ;; (route/not-found "Not Found"))
+  (GET "/:key{[a-zA-Z0-9]{4,8}}" [key] (utils/access-file key))
+  (route/not-found "Not Found"))
 
 (def app
   (-> app-routes
