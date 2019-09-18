@@ -1,6 +1,7 @@
-(ns backend.utils
+(ns screenshot-upload.utils
   (:require [clojure.java.io :as io]
-            [hiccup.core :refer :all]))
+            [hiccup.core :refer :all]
+            [hiccup.element :refer [link-to]]))
 
 (def files (atom {}))
 

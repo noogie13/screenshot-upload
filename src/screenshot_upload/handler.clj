@@ -5,7 +5,7 @@
             [ring.middleware.params :refer [wrap-params]]
             [ring.middleware.multipart-params :refer [wrap-multipart-params]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
-            [backend.utils :as utils]))
+            [screenshot-upload.utils :as utils]))
 
 (defroutes app-routes
   (GET "/" [] (utils/list-files))
